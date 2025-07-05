@@ -1,5 +1,5 @@
 from pms_integration.serializers.booking_serializer import BookingSerializer
-from pms_integration.services.query_service import get_bookings_for_hotel
+from pms_integration.models.booking import get_bookings_for_hotel
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView

@@ -1,5 +1,5 @@
 from decimal import Decimal
-
+from django.core.exceptions import ObjectDoesNotExist
 from django.db import models
 from pms_integration.models.hotel import Hotel
 from pms_integration.models.room import Room
@@ -23,3 +23,13 @@ class Booking(models.Model):
 
     def __str__(self):
         return f"Booking {self.booking_id} ({self.guest_name})"
+
+
+def get_bookings_for_hotel(hotel_id: int):
+    try:
+        hotel = Hotel.objects.get(id=hotel_id)
+    except ObjectDoesNotExist:
+        return None, "Hotel not found"
+
+    bookings = Booking.objects.filter(hotel=hotel).order_by("-updated_at")
+    return bookings, None
