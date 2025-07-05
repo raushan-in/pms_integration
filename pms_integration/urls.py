@@ -17,7 +17,7 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
-from pms_integration.views.bookings_view import BookingListView
+from pms_integration.views.bookings import BookingListView
 
 urlpatterns = [
     path("admin/", admin.site.urls),

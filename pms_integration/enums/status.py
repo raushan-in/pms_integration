@@ -6,3 +6,4 @@ class BookingStatus(str, Enum):
     PENDING = "pending"
     CANCELLED = "cancelled"
     CHECKED_IN = "checked_in"
+    CHECKED_OUT = "checked_out"

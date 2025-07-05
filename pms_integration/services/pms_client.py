@@ -5,7 +5,7 @@ from typing import Dict, List
 from pms_integration.exceptions import PMSConnectionError
 
 
-class MockPMSClient:
+class PMSClient:
     """
     Simulates an external PMS API by loading mock data from a JSON file.
     """
