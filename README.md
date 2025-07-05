@@ -132,6 +132,7 @@ Critical components are tested with unit tests:
 - Bulk insert optimization for Booking ingestion (currently done per record)
 - Full test suite with edge case coverage
 - Admin UI for PMS config upload (optional)
+- Periodic data update/sync 
 
 --- 
 **Raushan Kumar** 
