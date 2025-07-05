@@ -1,6 +1,7 @@
-from pms_integration.models.hotel import Hotel
-from pms_integration.models.booking import Booking
 from django.core.exceptions import ObjectDoesNotExist
+from pms_integration.models.booking import Booking
+from pms_integration.models.hotel import Hotel
+
 
 def get_bookings_for_hotel(hotel_id: int):
     try:

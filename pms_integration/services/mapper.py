@@ -1,16 +1,17 @@
 import re
-from datetime import datetime, date
+from datetime import date, datetime
 from decimal import Decimal, InvalidOperation
-from jsonschema import validate as jsonschema_validate, ValidationError
-from typing import Optional, Any, Dict
-from jsonpath_ng import parse as jsonpath_parse
+from typing import Any, Dict, Optional
 
-from pms_integration.exceptions import (
-    PMSDataValidationError,
-    PMSBusinessRuleError,
-    PMSMappingError
-)
+from jsonpath_ng import parse as jsonpath_parse
+from jsonschema import ValidationError
+from jsonschema import validate as jsonschema_validate
 from pms_integration.dtos.booking_dto import BookingDTO
+from pms_integration.exceptions import (
+    PMSBusinessRuleError,
+    PMSDataValidationError,
+    PMSMappingError,
+)
 
 
 class DataValidator:
@@ -73,7 +74,9 @@ class DataValidator:
             if check_out <= check_in:
                 errors.append("Check-out date must be after check-in date")
 
-            max_days = self.validation_rules.get("business_rules", {}).get("max_booking_days", 365)
+            max_days = self.validation_rules.get("business_rules", {}).get(
+                "max_booking_days", 365
+            )
             if (check_out - check_in).days > max_days:
                 errors.append(f"Booking duration exceeds {max_days} days")
 
@@ -112,6 +115,7 @@ class DataValidator:
             return datetime.strptime(value, pattern).date()
         except ValueError:
             return None
+
 
 class GenericJsonMapper:
     """Maps raw PMS data to internal DTO using config rules"""

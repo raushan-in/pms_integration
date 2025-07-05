@@ -1,12 +1,15 @@
 import json
 from pathlib import Path
-from typing import List, Dict
+from typing import Dict, List
+
 from pms_integration.exceptions import PMSConnectionError
+
 
 class MockPMSClient:
     """
     Simulates an external PMS API by loading mock data from a JSON file.
     """
+
     def __init__(self, file_path: str):
         self.file_path = Path(file_path)
 

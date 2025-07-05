@@ -1,5 +1,6 @@
-from rest_framework import serializers
 from pms_integration.models.booking import Booking
+from rest_framework import serializers
+
 
 class BookingSerializer(serializers.ModelSerializer):
     class Meta:

@@ -1,6 +1,8 @@
-from pydantic import BaseModel
 from datetime import datetime
+
 from pms_integration.enums.status import BookingStatus
+from pydantic import BaseModel
+
 
 class BookingDTO(BaseModel):
     booking_id: str

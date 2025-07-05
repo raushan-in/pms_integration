@@ -21,5 +21,7 @@ from pms_integration.views.bookings_view import BookingListView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("api/integrations/pms/bookings/", BookingListView.as_view(), name="booking-list"),
+    path(
+        "api/integrations/pms/bookings/", BookingListView.as_view(), name="booking-list"
+    ),
 ]
