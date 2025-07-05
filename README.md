@@ -56,7 +56,7 @@ Every PMS version comes with a dedicated **JSON configuration file** that define
 ### Why Config-Driven?
 
 * No code changes when PMS schemas evolve — **just update JSON**
-* ➕ Easy onboarding of new PMS versions
+* ➕ Easy onboarding of new PMS system
 
 ---
 
