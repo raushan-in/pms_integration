@@ -7,7 +7,7 @@ class MockPMSClient:
     """
     Simulates an external PMS API by loading mock data from a JSON file.
     """
-    def __init__(self, file_path: str = "mock_data/mock_pms_bookings.json"):
+    def __init__(self, file_path: str):
         self.file_path = Path(file_path)
 
     def fetch_bookings(self) -> List[Dict]:

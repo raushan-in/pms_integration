@@ -3,7 +3,7 @@ from django.db import models
 class PMSConfig(models.Model):
     name = models.CharField(max_length=100)
     version = models.CharField(max_length=20)
-    config_json = models.JSONField()
+    config_file_path = models.CharField(max_length=500, help_text="Path to the PMS configuration file")
 
     def __str__(self):
         return f"{self.name} v{self.version}"
