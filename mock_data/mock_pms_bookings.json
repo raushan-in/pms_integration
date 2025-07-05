@@ -1,0 +1,28 @@
+[
+  {
+    "reservation": {
+      "confirmationNumber": "ABC123",
+      "roomStay": {
+        "timeSpan": {
+          "start": "2025-07-05T14:00:00Z",
+          "end": "2025-07-07T10:00:00Z"
+        },
+        "roomType": {
+          "roomTypeCode": "STD"
+        },
+        "total": {
+          "amountAfterTax": "200.00"
+        }
+      },
+      "reservationStatus": {
+        "code": "CONFIRMED"
+      }
+    },
+    "guest": {
+      "profile": {
+        "firstName": "John",
+        "lastName": "Doe"
+      }
+    }
+  }
+]
