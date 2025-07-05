@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "pms-integration"
+version = "0.1.0"
+description = "pms integration"
+authors = ["Raushan Kumar"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^5.2.4"
+pydantic = "^2.11.7"
+jsonpath-ng = "^1.7.0"
+python-dotenv = "^1.1.1"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.4.1"
+pytest-django = "^4.11.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
