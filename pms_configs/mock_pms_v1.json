@@ -27,6 +27,30 @@
     "CHECKED_IN": "checked_in"
   },
   "validation_rules": {
-    "required_fields": ["booking_id", "guest_name", "check_in"]
+  "required_fields": ["booking_id", "guest_name", "check_in_date", "check_out_date"],
+  "fields": {
+      "guest_email": {
+        "type": "email"
+      },
+      "check_in_date": {
+        "type": "date"
+      },
+      "check_out_date": {
+        "type": "date"
+      },
+      "total_amount": {
+        "type": "decimal",
+        "min": 0,
+        "max": 999999.99
+      },
+      "status": {
+        "type": "enum",
+        "allowed": ["confirmed", "pending", "cancelled", "checked_in", "checked_out", "no_show"]
+      }
+    },
+    "business_rules": {
+      "max_booking_days": 365,
+      "check_out_after_check_in": true
+    }
   }
 }
